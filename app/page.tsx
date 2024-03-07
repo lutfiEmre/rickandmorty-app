@@ -5,17 +5,9 @@ import ContextRouter from "@/components/ContextRouter";
 import {useState} from "react";
 
 export default function Home() {
-    interface Character {
-        name: string;
-        image: string;
-    }
 
-    interface Settings {
-        same: number;
-        errors: string;
-    }
 
-    const [charac, setCharac] = useState<Character[]>([]);
+    const [charac, setCharac] = useState([]);
 
     const [items, setItems] = useState<string>('');
 
@@ -23,7 +15,7 @@ export default function Home() {
 
     const [loading, setLoading] = useState<boolean>(false);
 
-    const [settings, setSettings] = useState<Settings>({
+    const [settings, setSettings] = useState({
         same: 1,
         errors: '',
     });
@@ -38,3 +30,4 @@ export default function Home() {
     </main>
   );
 }
+
