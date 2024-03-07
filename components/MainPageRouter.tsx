@@ -140,8 +140,8 @@ const MainPageRouter = () => {
                 <div onClick={() => {setCharac([])}} className={'fixed active:-mb-1 cursor-pointer flex flex-col items-center right-[25px] bottom-[25px]'}>
                     <Image className={'w-[45px] h-[40px]'} src={product3} width={63} height={63} alt={'EmreLutfi.com portfolio'}/>
 
-                    <div  className={'w-[60px] h-[60px] bg-[#F73232] rounded-[10px]'}>
-                        <div className={'w-full boxshdw1 flex justify-center items-center h-full bg-[#F73232] rounded-[10px]'}>
+                    <div  className={'w-full px-[10px] h-[60px] bg-[#F73232] rounded-[10px]'}>
+                        <div className={'w-full boxshdw1 px-[10px] flex justify-center items-center h-full bg-[#F73232] rounded-[10px]'}>
                             <h6 className={'text-white select-none font-medium'}>Clear</h6>
                         </div>
                     </div>

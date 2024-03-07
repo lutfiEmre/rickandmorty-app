@@ -18,10 +18,7 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="en">
-      <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap"
-          rel="stylesheet"
-      />
+
       <body suppressHydrationWarning={true} className={inter.className}>{children}</body>
       </html>
   );
