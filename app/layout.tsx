@@ -17,8 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+      <html lang="en">
+      <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap"
+          rel="stylesheet"
+      />
       <body suppressHydrationWarning={true} className={inter.className}>{children}</body>
-    </html>
+      </html>
   );
 }
