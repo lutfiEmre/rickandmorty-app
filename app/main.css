@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p,{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg1{
+    border-radius: 8.435px;
+    border: 3.374px solid #BFDE42;
+    background: linear-gradient(97deg, #BFDE42 -8.52%, #45BED5 52.06%, #BFDE42 120.37%);
+    box-shadow: 0px 10.122px 50.612px 0px rgba(233, 101, 236, 0.20), 0px -10.122px 50.612px 0px rgba(101, 106, 236, 0.20);
+}
+.bg2{
+    border-radius: 8.435px;
+
+    box-shadow: 0px 10.122px 50.612px 0px #D5FF2A;
+}
+.bg3{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 25%, #46BED5 40%, rgba(191, 222, 66, 0.97) 55.5%, rgba(0, 0, 0, 0.92) 73%, rgba(0, 0, 0, 0.00) 100%);
+}
+.bg3a{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 25%, #46BED5 40%, rgba(191, 222, 66, 0.97) 55.5%, rgba(0, 0, 0, 0.92) 73%, rgba(0, 0, 0, 0.00) 100%);
+    filter: blur(5px);
+}
+.boxshdw1{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.sselectnone{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.cube {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.cube div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #45BED5;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.cube div:nth-child(1) { transform: translateZ(-20px) rotateY(180deg); }
+.cube div:nth-child(2) { transform: rotateY(-270deg) translateX(50%); transform-origin: top right; }
+.cube div:nth-child(3) { transform: rotateY(270deg) translateX(-50%); transform-origin: center left; }
+.cube div:nth-child(4) { transform: rotateX(90deg) translateY(-50%); transform-origin: top center; }
+.cube div:nth-child(5) { transform: rotateX(-90deg) translateY(50%); transform-origin: bottom center; }
+.cube div:nth-child(6) { transform: translateZ(20px); }
+
+@keyframes cube {
+    0% { transform: rotate(45deg) rotateX(-25deg) rotateY(25deg); }
+    50% { transform: rotate(45deg) rotateX(-385deg) rotateY(25deg); }
+    100% { transform: rotate(45deg) rotateX(-385deg) rotateY(385deg); }
+}
+
+.cube {
+    animation: cube 2s infinite ease;
+}
