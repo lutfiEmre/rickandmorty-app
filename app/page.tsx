@@ -10,15 +10,26 @@ export default function Home() {
         image: string;
     }
 
+    interface Settings {
+        same: number;
+        errors: string;
+    }
+
     const [charac, setCharac] = useState<Character[]>([]);
 
-    const [items,setItems] = useState('')
-    const [errors,setErrors] = useState(false)
-    const [loading,setLoading] = useState(false)
-    const [settings,setSettings] = useState({
+    const [items, setItems] = useState<string>('');
+
+    const [errors, setErrors] = useState<boolean>(false);
+
+    const [loading, setLoading] = useState<boolean>(false);
+
+    const [settings, setSettings] = useState<Settings>({
         same: 1,
-        errors: "",
-    })
+        errors: '',
+    });
+
+
+
     return (
     <main className="min-h-screen w-full">
         <ContextRouter.Provider value={{charac,setCharac,items,setItems,settings,setSettings,errors,loading,setLoading,setErrors}}>
