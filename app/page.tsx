@@ -10,7 +10,8 @@ export default function Home() {
         image: string;
     }
 
-    const [charac, setCharac] = useState([]);
+    const [charac, setCharac] = useState<Character[]>([]);
+
     const [items,setItems] = useState('')
     const [errors,setErrors] = useState(false)
     const [loading,setLoading] = useState(false)
