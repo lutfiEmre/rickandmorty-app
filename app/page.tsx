@@ -38,7 +38,7 @@ export default function Home() {
 
     return (
         <main className="min-h-screen w-full">
-            <ContextRouter.Provider value={{ charac, setCharac, items, setItems, settings, setSettings, errors, loading, setLoading, setErrors }}>
+            <ContextRouter.Provider value={{ charac, setCharac, items, setItems, settings, setSettings, errors, loading, setLoading, setErrors } as any}>
                 <MainPageRouter />
             </ContextRouter.Provider>
         </main>
