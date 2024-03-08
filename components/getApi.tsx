@@ -31,7 +31,7 @@ export const GetApi = () => {
                        setLoading(false);
                    }
                    setLoading(false);
-               },[1000])
+               },1000)
             } else {
                 setLoading(false);
               /*  setTimeout(() => {
@@ -52,7 +52,7 @@ export const GetApi = () => {
                         ...settings,
                         errors: ''
                     })
-                },[3000])
+                },3000)
             }
         } catch (error) {
             console.error('Error fetching character:', error);
