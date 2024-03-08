@@ -82,7 +82,7 @@ const MainPageRouter = () => {
                         {errors === true ? 'uh. Something went wrong.' : ''}
                         {settings && settings.errors}
                     </h1>
-                        {charac.map(item => (
+                        {charac.map((item: any) => (
                             <div key={item.id} className={'w-[95%] relative py-[20px]  md:p-[20px] lg:p-0 lg:w-full justify-between gap-[20px] lg:gap-0 flex flex-col lg:flex-row items-center lg:h-fit  2xl:h-[255px] rounded-[10px] bg-[#F3F3F3]'}>
                                 <Image className={'rounded-[10px] lg:hidden flex w-[150px] 2xl:w-[255px] h-full'} src={item.image} width={255} height={255} alt={'rick and morty emrelutfi.com'}/>
 

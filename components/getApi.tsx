@@ -4,14 +4,14 @@ import ContextRouter from "@/components/ContextRouter";
 
 
 export const GetApi = () => {
-    const inputs = useRef()
+    const inputs = useRef<string>()
     const { charac,errors,setErrors,setLoading,settings,setSettings, setCharac,items,setItems } : any = useContext(ContextRouter);
     const fetchData = async () => {
         try {
             setLoading(true);
-            const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${items && items}`);
-            const data = await response.json();
-            const  character =  data.results && data.results[0];
+            const response : any = await fetch(`https://rickandmortyapi.com/api/character/?name=${items && items}`);
+            const data : any = await response.json();
+            const  character : any =  data.results && data.results[0];
             if (character && items.length !== 0) {
                setTimeout(() => {
 
@@ -20,11 +20,11 @@ export const GetApi = () => {
                        errors: ''
                    })
 
-                   if (!charac.some(item => item.id === character.id)) {
+                   if (!charac.some((item: any) => item.id === character.id)) {
                        setCharac([...charac, character]);
                        setLoading(false);
                    }else {
-                       const newCharacter = data.results.find(item => !charac.some(existing => existing.id === item.id));
+                       const newCharacter = data.results.find((item: any) => !charac.some(existing => existing.id === item.id));
                        if (newCharacter) {
                            setCharac([...charac, newCharacter]);
                        }
