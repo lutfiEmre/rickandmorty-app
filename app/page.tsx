@@ -2,8 +2,22 @@
 import Image from "next/image";
 import MainPageRouter from "@/components/MainPageRouter";
 import ContextRouter from "@/components/ContextRouter";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
+interface Charac{
+    created: string,
+    episode: any,
+    gender: string,
+    id: number,
+    image: string,
+    location: any,
+    name: string,
+    origin: any,
+    species: string,
+    status: string,
+    type: string,
+    url: string,
+}
 
 interface Settings {
     same: number;
@@ -11,7 +25,7 @@ interface Settings {
 }
 
 export default function Home() {
-    const [charac, setCharac] = useState([])
+    const [charac, setCharac] = useState<Charac[]>([]);
     const [items, setItems] = useState<string>('');
     const [errors, setErrors] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
