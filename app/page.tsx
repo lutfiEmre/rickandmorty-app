@@ -27,7 +27,7 @@ export default function Home() {
         same: number;
         errors: string;
     }
-    const [charac, setCharac] = useState<Charac[]>([]);
+    const [charac, setCharac] = useState<any>([]);
     const [items, setItems] = useState<string>('');
     const [errors, setErrors] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
