@@ -24,7 +24,7 @@ export const GetApi = () => {
                        setCharac([...charac, character]);
                        setLoading(false);
                    }else {
-                       const newCharacter = data.results.find((item: any) => !charac.some(existing => existing.id === item.id));
+                       const newCharacter = data.results.find((item: any) => !charac.some((existing:any) => existing.id === item.id));
                        if (newCharacter) {
                            setCharac([...charac, newCharacter]);
                        }
