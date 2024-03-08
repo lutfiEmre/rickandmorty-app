@@ -4,27 +4,29 @@ import MainPageRouter from "@/components/MainPageRouter";
 import ContextRouter from "@/components/ContextRouter";
 import {useEffect, useState} from "react";
 
-interface Charac{
-    created: string,
-    episode: any,
-    gender: string,
-    id: number,
-    image: string,
-    location: any,
-    name: string,
-    origin: any,
-    species: string,
-    status: string,
-    type: string,
-    url: string,
-}
 
-interface Settings {
-    same: number;
-    errors: string;
-}
+
 
 export default function Home() {
+    interface Charac{
+        created: string,
+        episode: any,
+        gender: string,
+        id: number,
+        image: string,
+        location: any,
+        name: string,
+        origin: any,
+        species: string,
+        status: string,
+        type: string,
+        url: string,
+    }
+
+    interface Settings {
+        same: number;
+        errors: string;
+    }
     const [charac, setCharac] = useState<Charac[]>([]);
     const [items, setItems] = useState<string>('');
     const [errors, setErrors] = useState<boolean>(false);
