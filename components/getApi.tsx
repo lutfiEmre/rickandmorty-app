@@ -5,7 +5,7 @@ import ContextRouter from "@/components/ContextRouter";
 
 export const GetApi = () => {
     const inputs = useRef()
-    const { charac,errors,setErrors,setLoading,settings,setSettings, setCharac,items,setItems } = useContext(ContextRouter);
+    const { charac,errors,setErrors,setLoading,settings,setSettings, setCharac,items,setItems } : any = useContext(ContextRouter);
     const fetchData = async () => {
         try {
             setLoading(true);

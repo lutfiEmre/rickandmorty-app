@@ -13,9 +13,9 @@ import ContextRouter from "@/components/ContextRouter";
 import remover from '../public/remove.svg'
 const MainPageRouter = () => {
 
-    let { charac,setCharac,errors,loading,settings } = useContext(ContextRouter);
-    const removeFunc = (id) => {
-        const news = charac.filter(item => item.id !== id)
+    let { charac,setCharac,errors,loading,settings } : any = useContext(ContextRouter);
+    const removeFunc = (id: number) => {
+        const news = charac.filter((item:number) => item.id !== id)
         setCharac(news)
     }
 
