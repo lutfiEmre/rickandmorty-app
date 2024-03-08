@@ -15,7 +15,7 @@ const MainPageRouter = () => {
 
     let { charac,setCharac,errors,loading,settings } : any = useContext(ContextRouter);
     const removeFunc = (id: number) => {
-        const news = charac.filter((item:number) => item.id !== id)
+        const news = charac.filter((item:any) => item.id !== id)
         setCharac(news)
     }
 
