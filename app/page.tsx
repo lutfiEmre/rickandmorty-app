@@ -4,25 +4,6 @@ import MainPageRouter from "@/components/MainPageRouter";
 import ContextRouter from "@/components/ContextRouter";
 import { useState } from "react";
 
-interface Character {
-    name: string;
-    status: string;
-    species: string;
-    type: string;
-    gender: string;
-    origin: {
-        name: string;
-        url: string;
-    };
-    location: {
-        name: string;
-        url: string;
-    };
-    image: string;
-    episode: string[];
-    url: string;
-    created: string;
-}
 
 interface Settings {
     same: number;
@@ -30,7 +11,7 @@ interface Settings {
 }
 
 export default function Home() {
-    const [charac, setCharac] = useState<Character | null>(null);
+    const [charac, setCharac] = useState([])
     const [items, setItems] = useState<string>('');
     const [errors, setErrors] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
