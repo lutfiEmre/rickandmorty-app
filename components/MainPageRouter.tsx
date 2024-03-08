@@ -5,7 +5,9 @@ import {motion} from "framer-motion";
 import rickandmortylogo from '../public/rickandmortylogo.svg'
 import Image from "next/image";
 import product1 from '../public/product1.svg'
-import {GetApi} from "@/components/getApi";
+import dynamic from 'next/dynamic'
+const GetApiC = dynamic(() => import('../components/getApi'))
+
 import product2 from '../public/product2.svg'
 import product3 from '../public/product3.svg'
 import ricksanchez from '../public/characters/ricksanchez.svg'
@@ -32,7 +34,7 @@ const MainPageRouter = () => {
                                     by EmreLutfi.com
                                 </h5>
                             </div>
-                                <GetApi/>
+                                <GetApiC/>
                             <motion.div
                                 initial={{x:0,y:0}}
                                 animate={{x:[70,-60]}}
@@ -48,10 +50,10 @@ const MainPageRouter = () => {
                         <motion.div
                             transition={{ type: "spring", stiffness: 100 }}
                             className={'absolute bottom-0 z-20'}>
-                            <Image className={`${charac.length === 0 ? 'mt-0' : 'mb-[-500px]'}  transition-all duration-300  z-20 lg:w-[300px] select-none 2xl:w-[491px] h-auto`} src={product2} width={491} height={380} alt={'rick and morty emrelutfi.com'}/>
+                            <Image objectFit="cover" className={`${charac.length === 0 ? 'mt-0' : 'mb-[-500px]'}  transition-all duration-300  z-20 lg:w-[300px] select-none 2xl:w-[491px] h-auto`} src={product2} width={491} height={380} alt={'rick and morty emrelutfi.com'}/>
 
                         </motion.div>
-                        <Image className={'w-full h-full absolute top-0 left-0  select-nonex     object-cover'} src={framebg} width={973} height={1080} alt={'rick and morty background'}/>
+                        <Image objectFit="cover" className={'w-full h-full absolute top-0 left-0  select-nonex     object-cover'} src={framebg} width={973} height={1080} alt={'rick and morty background'}/>
                     </div>
 
                 </div>
@@ -84,7 +86,7 @@ const MainPageRouter = () => {
                     </h1>
                         {charac.map((item: any) => (
                             <div key={item.id} className={'w-[95%] relative py-[20px]  md:p-[20px] lg:p-0 lg:w-full justify-between gap-[20px] lg:gap-0 flex flex-col lg:flex-row items-center lg:h-fit  2xl:h-[255px] rounded-[10px] bg-[#F3F3F3]'}>
-                                <Image className={'rounded-[10px] lg:hidden flex w-[150px] 2xl:w-[255px] h-full'} src={item.image} width={255} height={255} alt={'rick and morty emrelutfi.com'}/>
+                                <Image objectFit="cover" className={'rounded-[10px] lg:hidden flex w-[150px] 2xl:w-[255px] h-full'} src={item.image} width={255} height={255} alt={'rick and morty emrelutfi.com'}/>
 
                                 <div className={'flex flex-row text-[10px] sm:text-[17px] lg:text-[13px] xl:text-[15px] gap-[25px]  pl-[20px] h-fit'}>
                                     <div className={'flex flex-col text-black gap-[9px]'}>
@@ -129,16 +131,16 @@ const MainPageRouter = () => {
                                     </div>
                                 </div>
 
-                                <Image className={'rounded-[10px] hidden lg:flex lg:w-[180px] xl:w-[210px] 2xl:w-[255px] h-full'} src={item.image} width={255} height={255} alt={'rick and morty emrelutfi.com'}/>
+                                <Image objectFit="cover" className={'rounded-[10px] hidden lg:flex lg:w-[180px] xl:w-[210px] 2xl:w-[255px] h-full'} src={item.image} width={255} height={255} alt={'rick and morty emrelutfi.com'}/>
                                 <div  onClick={() => {removeFunc(item.id)}} className={'absolute hover:scale-125 cursor-pointer right-[-5px] top-[-5px]'}>
-                                    <Image src={remover} width={32} height={32} alt={'emrelutfi.com'}/>
+                                    <Image objectFit="cover" src={remover} width={32} height={32} alt={'emrelutfi.com'}/>
                                 </div>
                             </div>
 
                         ))}
                 </div>
                 <div onClick={() => {setCharac([])}} className={'fixed active:-mb-1 cursor-pointer flex flex-col items-center right-[25px] bottom-[25px]'}>
-                    <Image className={'w-[45px] h-[40px]'} src={product3} width={63} height={63} alt={'EmreLutfi.com portfolio'}/>
+                    <Image lazy objectFit="cover" className={'w-[45px] h-[40px]'} src={product3} width={63} height={63} alt={'EmreLutfi.com portfolio'}/>
 
                     <div  className={'w-full px-[10px] h-[60px] bg-[#F73232] rounded-[10px]'}>
                         <div className={'w-full boxshdw1 px-[10px] flex justify-center items-center h-full bg-[#F73232] rounded-[10px]'}>

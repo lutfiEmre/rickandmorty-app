@@ -3,7 +3,11 @@ import Image from "next/image";
 import MainPageRouter from "@/components/MainPageRouter";
 import ContextRouter from "@/components/ContextRouter";
 import {useEffect, useState} from "react";
+import dynamic from 'next/dynamic'
 
+
+
+const MainPage = dynamic(() => import('../components/MainPageRouter'))
 
 
 
@@ -39,7 +43,7 @@ export default function Home() {
     return (
         <main className="min-h-screen w-full">
             <ContextRouter.Provider value={{ charac, setCharac, items, setItems, settings, setSettings, errors, loading, setLoading, setErrors } as any}>
-                <MainPageRouter />
+                <MainPage/>
             </ContextRouter.Provider>
         </main>
     );
