@@ -83,7 +83,7 @@ const GetApi = () => {
 
             <div onClick={() => {
                 fetchData()
-            }} className={'flex z-30 xl:mt-[50px] 2xl:mt-[200px] justify-center group relative items-center cursor-pointer w-full'}>
+            }} className={'flex z-30 xl:mt-[50px] mt-[100px] 2xl:mt-[200px] justify-center group relative items-center cursor-pointer w-full'}>
                 <div className={'w-full sm:w-[60%] xl:w-[40%] xl:h-[80px] z-20 hover:z-0 h-[70px] bg1 flex justify-center items-center '}>
                     <h5 className={'font-montserrat text-[30px] tracking-wide text-white font-bold'}>
                         Search

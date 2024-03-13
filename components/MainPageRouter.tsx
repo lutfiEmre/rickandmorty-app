@@ -27,7 +27,7 @@ const MainPageRouter = () => {
             <div className={'w-[50%] h-full'}>
                 <div className={'fixed left-0 h-full top-0 w-[50%]'}>
                     <div className={'flex flex-col w-full pt-[95px]  h-screen relative w-full items-center flex-row justify-start '}>
-                        <div className={'flex flex-col w-full items-center relative  2xl:gap-[80px] xl:gap-[40px] z-40 '}>
+                        <div className={'flex flex-col w-full items-center relative gap-[50px]  2xl:gap-[80px] xl:gap-[40px] z-40 '}>
                             <div className={'flex z-10 flex-col justify-center items-center'}>
                                 <Image className={'w-[200px] sm:w-[493px] md:w-[600px] xl:w-[700px] 2xl:w-[900px] -z-10 sselectnone select-none h-auto '} src={rickandmortylogo} width={493} height={200} alt={'rick and morty background'}/>
                                 <h5 className={'text-[16px] lg:text-[24px] 2xl:text-[35px] text-white font-semibold'}>
@@ -37,9 +37,9 @@ const MainPageRouter = () => {
                                 <GetApiC/>
                             <motion.div
                                 initial={{x:0,y:0}}
-                                animate={{x:[70,-60]}}
+                                animate={{x:[100,-100]}}
                                 transition={{repeat: Infinity,duration: 1,ease: "linear", repeatType: "reverse"}}
-                                className={'absolute xl:top-[-50px] 2xl:top-[60px] xl:top-[-20px]'}>
+                                className={'absolute xl:top-[-80px] top-[-150px] sm:top-[-100px] 2xl:top-[200px] '}>
                                 <Image className={'w-[250px] h-[680px] xl:w-[300px] 2xl:w-[380px]'} src={product1} width={302} height={680} alt={'rick and morty api'}/>
                             </motion.div>
                         </div>
@@ -53,7 +53,7 @@ const MainPageRouter = () => {
                             <Image objectFit="cover" className={`${charac.length === 0 ? 'mt-0' : 'mb-[-500px]'}  transition-all duration-300  z-20 lg:w-[300px] select-none h-[200px] 2xl:w-[491px] `} src={product2} width={491} height={380} alt={'rick and morty emrelutfi.com'}/>
 
                         </motion.div>
-                        <Image objectFit="cover" className={'w-[973px] h-[1080px] absolute top-0 left-0  select-nonex     object-cover'} src={framebg} width={973} height={1080} alt={'rick and morty background'}/>
+                        <Image objectFit="cover" className={'w-full h-full absolute top-0 left-0  select-nonex     object-cover'} src={framebg} width={973} height={1080} alt={'rick and morty background'}/>
                     </div>
 
                 </div>
