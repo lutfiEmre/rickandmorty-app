@@ -29,7 +29,7 @@ const MainPageRouter = () => {
                     <div className={'flex flex-col w-full pt-[95px]  h-screen relative w-full items-center flex-row justify-start '}>
                         <div className={'flex flex-col w-full items-center relative gap-[50px]  2xl:gap-[80px] xl:gap-[40px] z-40 '}>
                             <div className={'flex z-10 flex-col justify-center items-center'}>
-                                <Image className={'w-[200px] sm:w-[493px] md:w-[600px] xl:w-[700px] 2xl:w-[900px] -z-10 sselectnone select-none h-auto '} src={rickandmortylogo} width={493} height={200} alt={'rick and morty background'}/>
+                                <Image className={'w-[200px] asd sm:w-[493px] md:w-[600px] xl:w-[700px] 2xl:w-[900px] -z-10 sselectnone select-none h-auto '} src={rickandmortylogo} width={493} height={200} alt={'rick and morty background'}/>
                                 <h5 className={'text-[16px] lg:text-[24px] 2xl:text-[35px] text-white font-semibold'}>
                                     by EmreLutfi.com
                                 </h5>
